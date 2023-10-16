@@ -37,7 +37,7 @@ void UScoreBoard::NextLevelClicked()
 	break;
 
 	case 1:
-		UGameplayStatics::OpenLevel(this, FName("Level_02"));
+		UGameplayStatics::OpenLevel(this, FName("EndGame"));
 	break;
 
 	case 2:

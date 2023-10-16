@@ -21,6 +21,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	int32 NPlayers{ 1 };
 
+	
 	int32 TotalScore[4]{ 0,0,0,0 }; // lo score complessivo per i giocatori
 	// lo utilizzeremo sia per il valore complessivo che per i punteggi della singola buca
 	int32 Gold[4]{ 0,0,0,0 };
@@ -30,6 +31,5 @@ public:
 	int32 CurrentHole{ 0 };
 
 	int32 Par[3]{ 3,5,4 }; // incrementare questo array per ogni nuova buca creata.
-
 
 };
