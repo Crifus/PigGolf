@@ -25,6 +25,9 @@ private:
 		UButton* PlayGame;
 
 	UPROPERTY(meta = (BindWidget))
+		UButton* Tutorial;
+
+	UPROPERTY(meta = (BindWidget))
 		UButton* More;
 
 	UPROPERTY(meta = (BindWidget))
@@ -32,6 +35,10 @@ private:
 
 	UFUNCTION()
 	void PlayGameClicked();
+
+	UFUNCTION()
+	void TutorialClicked();
+
 	UFUNCTION()
 	void MoreClicked();
 	UFUNCTION()

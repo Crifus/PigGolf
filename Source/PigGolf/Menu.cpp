@@ -31,6 +31,31 @@ void UMenu::PlayGameClicked()
 	UGameplayStatics::OpenLevel(this, FName("Level_01"));
 }
 
+void UMenu::TutorialClicked()
+{
+	auto MyInstance = Cast<UPorkInstance>(GetGameInstance());
+	MyInstance->NPlayers = Players; // avvio il gioco e i giocatori scelti nel menù vengono scritti sul game instance
+	MyInstance->CurrentHole = 0;
+
+	RemoveFromParent();
+
+	UWorld* World = GetWorld();
+
+	if (World)
+	{
+		APlayerController* PC = World->GetFirstPlayerController();
+		if (PC)
+		{
+			// game only, focus on the game !
+			FInputModeGameOnly InputModeData;
+			PC->SetInputMode(InputModeData); // now imput mode for this PC is defined 
+			PC->SetShowMouseCursor(false);  //mouse cursor disappear
+		}
+	}
+
+	UGameplayStatics::OpenLevel(this, FName("TutorialMap"));
+}
+
 void UMenu::MoreClicked()
 {
 	if (Players < 4 ) Players++;
@@ -71,6 +96,11 @@ bool UMenu::Initialize() // initialize is just after the constructor
 	if (PlayGame)  // the name here should be exactlly the same name we have inside the widget
 	{
 		PlayGame->OnClicked.AddDynamic(this, &ThisClass::PlayGameClicked);
+	}
+
+	if (Tutorial)  
+	{
+		Tutorial->OnClicked.AddDynamic(this, &ThisClass::TutorialClicked);
 	}
 
 	if (More)

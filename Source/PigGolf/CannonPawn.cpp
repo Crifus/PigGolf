@@ -65,7 +65,7 @@ void ACannonPawn::ViewMap()
 
 void ACannonPawn::AddGold()
 {
-	if (Gold < 30) Gold++; // ogni 30 monete si recuperaun tiro
+	if (Gold < 10) Gold++; // ogni 10 monete si recuperaun tiro
 	else
 	{
 		Gold = 0;
