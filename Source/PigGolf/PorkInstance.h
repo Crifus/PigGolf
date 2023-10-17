@@ -32,4 +32,16 @@ public:
 
 	int32 Par[3]{ 3,5,4 }; // incrementare questo array per ogni nuova buca creata.
 
+
+	UFUNCTION(BlueprintPure)
+	int32 GetTotalScore1() { return TotalScore[0]; };
+
+	UFUNCTION(BlueprintPure)
+	int32 GetTotalScore2() { return TotalScore[1]; };
+
+	UFUNCTION(BlueprintPure)
+	int32 GetTotalScore3() { return TotalScore[2]; };
+
+	UFUNCTION(BlueprintPure)
+	int32 GetTotalScore4() { return TotalScore[3]; };
 };
