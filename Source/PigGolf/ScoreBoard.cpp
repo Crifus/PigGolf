@@ -33,15 +33,15 @@ void UScoreBoard::NextLevelClicked()
 	switch (current)
 	{
 	case 0:
-		UGameplayStatics::OpenLevel(this, FName("Level_01"));
+		UGameplayStatics::OpenLevel(this, FName("Buca01"));
 	break;
 
 	case 1:
-		UGameplayStatics::OpenLevel(this, FName("Level_02"));
+		UGameplayStatics::OpenLevel(this, FName("Buca02"));
 	break;
 
 	case 2:
-		UGameplayStatics::OpenLevel(this, FName("Level_03"));
+		UGameplayStatics::OpenLevel(this, FName("Buca03"));
 	break;
 
 	case 3:
