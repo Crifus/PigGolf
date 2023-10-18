@@ -28,7 +28,7 @@ void UMenu::PlayGameClicked()
 		}
 	}
 
-	UGameplayStatics::OpenLevel(this, FName("Level_01"));
+	UGameplayStatics::OpenLevel(this, FName("Buca01"));
 }
 
 void UMenu::TutorialClicked()

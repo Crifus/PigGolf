@@ -37,15 +37,15 @@ void UScoreBoard::NextLevelClicked()
 	break;
 
 	case 1:
-		UGameplayStatics::OpenLevel(this, FName("TutorialMap"));
-	break;
-
-	case 2:
 		UGameplayStatics::OpenLevel(this, FName("Buca02"));
 	break;
 
-	case 3:
+	case 2:
 		UGameplayStatics::OpenLevel(this, FName("Buca03"));
+	break;
+
+	case 3:
+		UGameplayStatics::OpenLevel(this, FName("Level_01"));
 	break;
 
 	case 4:
